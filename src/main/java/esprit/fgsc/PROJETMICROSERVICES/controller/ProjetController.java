@@ -36,7 +36,7 @@ public class ProjetController {
 		return new ResponseEntity<>(projetService.addProjet(projet), HttpStatus.OK);
 	}
 	
-	@GetMapping("/conges")
+	@GetMapping
 	@ResponseStatus(HttpStatus.OK)
 	public ResponseEntity<List<Projet> >getAllProjet(){
 		 return new ResponseEntity<>(projetService.getAllProjet(),HttpStatus.OK);
