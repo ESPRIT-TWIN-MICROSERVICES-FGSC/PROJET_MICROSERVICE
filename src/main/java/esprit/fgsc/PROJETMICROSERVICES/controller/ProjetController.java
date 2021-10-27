@@ -43,8 +43,8 @@ public class ProjetController {
 	}
 	
 	@DeleteMapping("/delete/{id}")
-	public String deleteProjet(@PathVariable String id) {
-	    return projetService.deleteProjet(id.toString());
+	public void deleteProjet(@PathVariable String id) {
+	   
 	}
 
 	@PutMapping("/update/{id}")
