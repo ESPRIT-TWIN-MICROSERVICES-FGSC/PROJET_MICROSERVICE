@@ -19,12 +19,6 @@ public class ProjetService {
 	private IProjetRepository projetRepository;
 	
 	public Projet addProjet(Projet projet) {
-		Date date = new Date();
-        String start_date = sdf.format(date);
-        projet.setStartDate(start_date);
-		Date date1 = new Date();
-        String end_date = sdf.format(date1);
-        projet.setEndDate(end_date);
 		return projetRepository.save(projet);
 		
 	}
@@ -45,8 +39,6 @@ public Projet updateProjet(String id,Projet newProjet) {
 		existingProjet.setProjectName(newProjet.getProjectName());
 		existingProjet.setTeamSize(newProjet.getTeamSize());
 		existingProjet.setStartDate( newProjet.getStartDate());
-		Date date1 = new Date();
-        String end_date = sdf.format(date1);
 		existingProjet.setEndDate(newProjet.getEndDate());
 		return projetRepository.save(existingProjet);
 		
