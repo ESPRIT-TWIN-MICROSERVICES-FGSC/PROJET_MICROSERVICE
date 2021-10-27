@@ -26,9 +26,9 @@ public class ProjetService {
 		 return projetRepository.findAll();
 	}
 	
-	public String deleteProjet(String id) {   
+	public void deleteProjet(String id) {   
 		projetRepository.deleteById(id);
-   	return "Projet deleted";
+   
 	}
           
 public Projet updateProjet(String id,Projet newProjet) {
