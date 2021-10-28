@@ -44,7 +44,7 @@ public class ProjetController {
 	
 	@DeleteMapping("/delete/{id}")
 	public void deleteProjet(@PathVariable String id) {
-	   
+		projetService.deleteProjet(id);
 	}
 
 	@PutMapping("/update/{id}")
